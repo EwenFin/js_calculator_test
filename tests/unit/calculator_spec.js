@@ -74,35 +74,35 @@ describe('calculator', function () {
   }) 
 
   it('+ button adds', function(){
-    calculator.runningTotal = 10;
+    calculator.runningTotal = 1;
     calculator.operatorClick('+');
-    calculator.runningTotal = 5;
+    calculator.runningTotal = 4;
     calculator.operatorClick('=')
-    assert.strictEqual(15, calculator.runningTotal)
+    assert.strictEqual(5, calculator.runningTotal)
   })
 
   it('- button subtracts', function(){
-    calculator.runningTotal = 10;
+    calculator.runningTotal = 7;
     calculator.operatorClick('-');
-    calculator.runningTotal = 3;
+    calculator.runningTotal = 4;
     calculator.operatorClick('=')
-    assert.strictEqual(7, calculator.runningTotal)
+    assert.strictEqual(3, calculator.runningTotal)
   })
 
   it('* button multiplies', function(){
-    calculator.runningTotal = 10;
+    calculator.runningTotal = 3;
     calculator.operatorClick('*');
-    calculator.runningTotal = 10;
+    calculator.runningTotal = 5;
     calculator.operatorClick('=');
-    assert.strictEqual(100, calculator.runningTotal)
+    assert.strictEqual(15, calculator.runningTotal)
   })
 
   it('/ button divides', function(){
-    calculator.runningTotal = 10;
+    calculator.runningTotal = 21;
     calculator.operatorClick('/');
-    calculator.runningTotal = 10;
+    calculator.runningTotal = 7;
     calculator.operatorClick('=');
-    assert.strictEqual(1, calculator.runningTotal);
+    assert.strictEqual(3, calculator.runningTotal);
   })
 
   it('clear button resets running total', function(){

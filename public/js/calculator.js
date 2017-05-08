@@ -62,13 +62,18 @@ Calculator.prototype = {
     // if the 'equals' button was clicked, clear the previous operator, otherwise
     // record what the previous operator was
     if (operator == '=') {
+      //throws an alert if dividing by zero
+      if(this.previousOperator === '/' && this.runningTotal === Infinity){
+        alert("cannot divide by zero")
+      }
+      
       this.previousOperator = null;
     } else {
       this.previousOperator = operator;
     }
     // replace the previous total with the current running total and flag that a
     // new total has been calculated
-
+  
     this.previousTotal = this.runningTotal;
     this.newTotal = true;
   },

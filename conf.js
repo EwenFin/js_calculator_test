@@ -1,5 +1,5 @@
 exports.config = {
-  framework: 'mocha',
+  // framework: 'mocha',
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['tests/integration/tests.js']
 };
